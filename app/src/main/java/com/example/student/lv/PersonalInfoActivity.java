@@ -18,10 +18,10 @@ private String sImePrezime;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
 
-        oBtnIme = (Button)findViewById(R.id.buttonSend);
-        oIme = (EditText)findViewById(R.id.textName);
+        //oBtnIme = (Button)findViewById(R.id.buttonSend);
+        //oIme = (EditText)findViewById(R.id.textName);
 
-        oBtnIme.setOnClickListener(new View.OnClickListener() {
+       /* oBtnIme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sImePrezime = oIme.getText().toString();
@@ -30,7 +30,7 @@ private String sImePrezime;
                 startActivity(oStudentImeIntent);
                 //startActivity(new Intent(PersonalInfoActivity.this, StudentInfoActivity.class));
             }
-        });
+        });*/
 
 
     }
