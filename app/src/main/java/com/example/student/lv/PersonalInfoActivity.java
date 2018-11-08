@@ -33,10 +33,9 @@ private String sImePrezime;
         });
 
 
-
-
-
-
-
     }
+    @Override
+    public void onBackPressed() { }
 }
+
+
