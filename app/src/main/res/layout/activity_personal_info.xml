@@ -14,13 +14,14 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:hint="Unesite ime"
+            android:id="@+id/textName"
+            />
     </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/buttonSend"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:text="Posalji" />
 </LinearLayout>
