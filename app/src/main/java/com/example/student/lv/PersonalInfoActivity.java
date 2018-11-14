@@ -9,29 +9,40 @@ import android.widget.EditText;
 
 public class PersonalInfoActivity extends AppCompatActivity {
 
-private Button oBtnIme;
+private Button oBtnPersonal;
 private EditText oIme;
-private String sImePrezime;
+private EditText oPrezime;
+private EditText oRodenje;
+private String sIme;
+private String sPrezime;
+private String sRodenje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
 
-        //oBtnIme = (Button)findViewById(R.id.buttonSend);
-        //oIme = (EditText)findViewById(R.id.textName);
+        oBtnPersonal = (Button)findViewById(R.id.btnPersonal);
+        oIme = (EditText)findViewById(R.id.editIme);
+        oPrezime = (EditText)findViewById(R.id.editPrezime);
+        oRodenje = (EditText)findViewById(R.id.editRodenje);
 
-       /* oBtnIme.setOnClickListener(new View.OnClickListener() {
+
+        oBtnPersonal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sImePrezime = oIme.getText().toString();
-                Intent oStudentImeIntent = new Intent(getApplicationContext(), StudentInfoActivity.class);
-                oStudentImeIntent.putExtra("imePrezime",sImePrezime);
-                startActivity(oStudentImeIntent);
-                //startActivity(new Intent(PersonalInfoActivity.this, StudentInfoActivity.class));
-            }
-        });*/
 
+                sIme = oIme.getText().toString();
+                sPrezime = oPrezime.getText().toString();
+                sRodenje = oRodenje.getText().toString();
+
+                Intent oStudentInfoIntent = new Intent(getApplicationContext(), StudentInfoActivity.class);
+                oStudentInfoIntent.putExtra("ime",sIme);
+                oStudentInfoIntent.putExtra("prezime",sPrezime);
+                oStudentInfoIntent.putExtra("rodenje",sRodenje);
+                startActivity(oStudentInfoIntent);
+            }
+        });
 
     }
     @Override

@@ -9,10 +9,20 @@ import android.widget.EditText;
 
 public class StudentInfoActivity extends AppCompatActivity {
 
-    private Button oBtnPredmet;
+    private Button oBtnInfo;
     private String sPredmet;
+    private String sProfesor;
+    private String sGodina;
+    private String sECTS;
     private EditText oPredmet;
+    private EditText oProfesor;
+    private EditText oGodina;
+    private EditText oECTS;
+
     private String sIme;
+    private String sPrezime;
+    private String sRodenje;
+
 
 
     @Override
@@ -20,19 +30,39 @@ public class StudentInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_info);
 
-        oBtnPredmet = (Button)findViewById(R.id.buttonSave);
+        oBtnInfo = (Button)findViewById(R.id.btnInfo);
+
         oPredmet=(EditText)findViewById(R.id.textPredmet);
+        oProfesor=(EditText)findViewById(R.id.editProfIme);
+        oGodina=(EditText)findViewById(R.id.editGodina);
+        oECTS=(EditText)findViewById(R.id.editECTS);
+
+
+
 
         final Bundle oExtras = getIntent().getExtras();
-        sIme = oExtras.getString("imePrezime");
+        sIme = oExtras.getString("ime");
+        sPrezime = oExtras.getString("prezime");
+        sRodenje = oExtras.getString("rodenje");
 
-        oBtnPredmet.setOnClickListener(new View.OnClickListener(){
+        oBtnInfo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 sPredmet = oPredmet.getText().toString();
+                sProfesor = oProfesor.getText().toString();
+                sGodina = oGodina.getText().toString();
+                sECTS = oECTS.getText().toString();
+
                 Intent oStudentPredmetIntent = new Intent(getApplicationContext(),SummaryActivity.class);
-                oStudentPredmetIntent.putExtra("imePrezime",sIme);
+                oStudentPredmetIntent.putExtra("ime",sIme);
+                oStudentPredmetIntent.putExtra("prezime",sPrezime);
+                oStudentPredmetIntent.putExtra("rodenje",sRodenje);
+
                 oStudentPredmetIntent.putExtra("predmet",sPredmet);
+                oStudentPredmetIntent.putExtra("profesor",sProfesor);
+                oStudentPredmetIntent.putExtra("godina",sGodina);
+                oStudentPredmetIntent.putExtra("ects",sECTS);
+
                 startActivity(oStudentPredmetIntent);
             }
         });
