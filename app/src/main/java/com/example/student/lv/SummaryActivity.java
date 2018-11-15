@@ -18,6 +18,8 @@ public class SummaryActivity extends AppCompatActivity {
     private String sProfesor;
     private String sGodina;
     private String sECTS;
+    private String sPredavanja;
+    private String sLV;
 
 
     private TextView oIme;
@@ -28,6 +30,8 @@ public class SummaryActivity extends AppCompatActivity {
     private TextView oProfesor;
     private TextView oGodina;
     private TextView oECTS;
+    private TextView oPredavanja;
+    private TextView oLV;
 
     private Button oBtnEnd;
 
@@ -48,6 +52,8 @@ public class SummaryActivity extends AppCompatActivity {
         sProfesor = oExtras.getString("profesor");
         sGodina = oExtras.getString("godina");
         sECTS = oExtras.getString("ects");
+        sPredavanja = oExtras.getString("predavanja");
+        sLV = oExtras.getString("lv");
 
         oIme = (TextView)findViewById(R.id.txtIme);
         oPrezime = (TextView)findViewById(R.id.txtPrezime);
@@ -57,6 +63,8 @@ public class SummaryActivity extends AppCompatActivity {
         oProfesor = (TextView)findViewById(R.id.profIme);
         oGodina = (TextView)findViewById(R.id.akademskaGodina);
         oECTS = (TextView)findViewById(R.id.ectsBroj);
+        oPredavanja = (TextView)findViewById(R.id.predavanjaBroj);
+        oLV = (TextView)findViewById(R.id.lvBroj);
 
         oIme.setText(sIme);
         oPrezime.setText(sPrezime);
@@ -66,8 +74,11 @@ public class SummaryActivity extends AppCompatActivity {
         oProfesor.setText(sProfesor);
         oGodina.setText(sGodina);
         oECTS.setText(sECTS);
+        oPredavanja.setText(sPredavanja);
+        oLV.setText(sLV);
 
-       oBtnEnd = (Button)findViewById(R.id.btnEnd);
+
+        oBtnEnd = (Button)findViewById(R.id.btnEnd);
         oBtnEnd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(SummaryActivity.this, PersonalInfoActivity.class));

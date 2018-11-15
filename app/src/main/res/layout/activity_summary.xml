@@ -165,6 +165,43 @@
         android:layout_marginBottom="16dp"
         android:background="#c0c0c0"
         app:layout_constraintTop_toBottomOf="@id/ectsBroj"/>
+
+    <TextView
+        android:id="@+id/predavanjaBroj"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predavanja"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line7"
+        />
+
+    <View
+        android:id="@+id/line8"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/predavanjaBroj"/>
+
+    <TextView
+        android:id="@+id/lvBroj"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LV"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line8"
+        />
+
+
     <Button
         android:id="@+id/btnEnd"
         android:layout_width="wrap_content"

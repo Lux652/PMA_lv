@@ -14,10 +14,16 @@ public class StudentInfoActivity extends AppCompatActivity {
     private String sProfesor;
     private String sGodina;
     private String sECTS;
+    private String sPredavanja;
+    private String sLV;
+
     private EditText oPredmet;
     private EditText oProfesor;
     private EditText oGodina;
     private EditText oECTS;
+    private EditText oPredavanja;
+    private EditText oLV;
+
 
     private String sIme;
     private String sPrezime;
@@ -36,6 +42,9 @@ public class StudentInfoActivity extends AppCompatActivity {
         oProfesor=(EditText)findViewById(R.id.editProfIme);
         oGodina=(EditText)findViewById(R.id.editGodina);
         oECTS=(EditText)findViewById(R.id.editECTS);
+        oPredavanja=(EditText)findViewById(R.id.editPred);
+        oLV=(EditText)findViewById(R.id.editLV);
+
 
 
 
@@ -52,6 +61,8 @@ public class StudentInfoActivity extends AppCompatActivity {
                 sProfesor = oProfesor.getText().toString();
                 sGodina = oGodina.getText().toString();
                 sECTS = oECTS.getText().toString();
+                sPredavanja = oPredavanja.getText().toString();
+                sLV = oLV.getText().toString();
 
                 Intent oStudentPredmetIntent = new Intent(getApplicationContext(),SummaryActivity.class);
                 oStudentPredmetIntent.putExtra("ime",sIme);
@@ -62,6 +73,8 @@ public class StudentInfoActivity extends AppCompatActivity {
                 oStudentPredmetIntent.putExtra("profesor",sProfesor);
                 oStudentPredmetIntent.putExtra("godina",sGodina);
                 oStudentPredmetIntent.putExtra("ects",sECTS);
+                oStudentPredmetIntent.putExtra("predavanja",sPredavanja);
+                oStudentPredmetIntent.putExtra("lv",sLV);
 
                 startActivity(oStudentPredmetIntent);
             }
