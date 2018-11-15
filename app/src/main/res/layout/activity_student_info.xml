@@ -66,8 +66,8 @@ tools:context=".StudentInfoActivity">
         android:layout_height="wrap_content"
         android:text="Akademska godina:"
         android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="@id/akGod"
-        app:layout_constraintBottom_toBottomOf="@id/akGod"
+        app:layout_constraintTop_toTopOf="@+id/akGod"
+        app:layout_constraintBottom_toBottomOf="@+id/akGod"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/akGod"
         />
