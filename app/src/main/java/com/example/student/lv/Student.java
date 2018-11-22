@@ -1,11 +1,28 @@
 package com.example.student.lv;
 
 public class Student {
-    String sIme;
-    String sPrezime;
+   private String name;
+   private String lastName;
 
-    public Student(String ime, String prezime){
-        sIme=ime;
-        sPrezime=prezime;
+    public Student(String name, String lastName){
+        this.name = name;
+        this.lastName = lastName;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void getLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

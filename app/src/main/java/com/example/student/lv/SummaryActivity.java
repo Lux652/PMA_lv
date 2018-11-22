@@ -81,7 +81,7 @@ public class SummaryActivity extends AppCompatActivity {
         oBtnEnd = (Button)findViewById(R.id.btnEnd);
         oBtnEnd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SummaryActivity.this, PersonalInfoActivity.class));
+                startActivity(new Intent(SummaryActivity.this, MainActivity.class));
             }
         });
 
