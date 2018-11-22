@@ -12,7 +12,12 @@ import java.util.List;
 
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private Object[] mDataset;
+
+     List<Object> dataList;
+
+    public MyAdapter(List<Object>myDataset){
+        dataList = myDataset;
+    }
 
 
     public class NaslovVH extends RecyclerView.ViewHolder{
@@ -38,11 +43,6 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
 
-
-    public MyAdapter(Object[] myDataset) {
-        mDataset = myDataset;
-    }
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
@@ -54,7 +54,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         else{
             TextView view = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.header_layout, viewGroup, false);
-            return new NaslovVH(view);
+            return new StudentVH(view);
         }
 
     }
@@ -62,10 +62,25 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int viewType) {
 
+        if(viewType == 0){
+            NaslovVH nVh = (NaslovVH) viewHolder;
+        }
+        else{
+            StudentVH sVh = (StudentVH) viewHolder;
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dataList.size();
+    }
+
+    public int getItemViewType(int position){
+        if(position == 0){
+            return 0;
+        }
+        else{
+            return 1;
+        }
     }
 }
