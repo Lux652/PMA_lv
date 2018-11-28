@@ -45,8 +45,7 @@ private String sRodenje;
         });
 
     }
-    @Override
-    public void onBackPressed() { }
+
 }
 
 

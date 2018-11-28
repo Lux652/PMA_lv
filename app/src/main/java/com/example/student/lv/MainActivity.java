@@ -1,9 +1,14 @@
 package com.example.student.lv;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,34 +16,36 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button oBtnStudent;
+    private Spinner oSpinner;
 
-    /*Od prosli puta*/
-
-   /* private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private List<Object>lStudent = new ArrayList<>();
-*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      /*
-       od prosli puta
-       mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-        mAdapter = new MyAdapter(lStudent);
-        Student imeprezime = new Student("Luka", "Kovacic");
-        lStudent.add(imeprezime);
-        mRecyclerView.setAdapter(mAdapter);*/
 
       RecyclerView recView = findViewById(R.id.recyclerView);
       List<Object>studentList = generateList();
       initializeRecyclerView(recView, studentList);
+
+        oSpinner = (Spinner) findViewById(R.id.spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.jezik_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        oSpinner.setAdapter(adapter);
+
+
+
+        oBtnStudent = (Button)findViewById(R.id.btnStudent);
+        oBtnStudent.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PersonalInfoActivity.class));
+            }
+        });
 
     }
 
@@ -57,4 +64,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(new MainRecyclerViewAdapter(studentList));
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
     }
+
+    @Override
+    public void onBackPressed() { }
 }

@@ -19,7 +19,7 @@ tools:context=".StudentInfoActivity">
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:hint="Predmet"
+        android:hint="@string/predmet_hint"
         android:id="@+id/textPredmet"/>
 
     <View
@@ -45,7 +45,7 @@ tools:context=".StudentInfoActivity">
             android:id="@+id/editProfIme"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Ime i prezime profesora" />
+            android:hint="@string/profesor_hint" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -64,7 +64,7 @@ tools:context=".StudentInfoActivity">
         android:layout_marginLeft="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akademska godina:"
+        android:text="@string/godina"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="@+id/akGod"
         app:layout_constraintBottom_toBottomOf="@+id/akGod"
@@ -86,8 +86,7 @@ tools:context=".StudentInfoActivity">
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editGodina"
-            android:hint="Godina" />
+            android:id="@+id/editGodina"/>
     </android.support.design.widget.TextInputLayout>
 
     <View
@@ -104,7 +103,7 @@ tools:context=".StudentInfoActivity">
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="ECTS:"
+        android:text="@string/ects"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/brEcts"
         app:layout_constraintEnd_toStartOf="@+id/brEcts"
@@ -128,8 +127,7 @@ tools:context=".StudentInfoActivity">
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editECTS"
-            android:hint="ECTS" />
+            android:id="@+id/editECTS" />
     </android.support.design.widget.TextInputLayout>
 
     <View
@@ -147,7 +145,7 @@ tools:context=".StudentInfoActivity">
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Predavanja (h):"
+        android:text="@string/predavanja"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/brPred"
         app:layout_constraintEnd_toStartOf="@+id/brPred"
@@ -171,8 +169,7 @@ tools:context=".StudentInfoActivity">
         <android.support.design.widget.TextInputEditText
             android:id="@+id/editPred"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Predavanja" />
+            android:layout_height="wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -191,7 +188,7 @@ tools:context=".StudentInfoActivity">
         android:layout_height="24dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="LV (h):"
+        android:text="@string/lv"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/brLV"
         app:layout_constraintEnd_toStartOf="@+id/brLV"
@@ -215,8 +212,7 @@ tools:context=".StudentInfoActivity">
         <android.support.design.widget.TextInputEditText
             android:id="@+id/editLV"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="LV" />
+            android:layout_height="wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -226,7 +222,7 @@ tools:context=".StudentInfoActivity">
         android:id="@+id/btnInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spremi"
+        android:text="@string/btn_spremi"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"

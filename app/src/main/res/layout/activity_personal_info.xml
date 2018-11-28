@@ -32,7 +32,7 @@
             android:id="@+id/editIme"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Unesite ime" />
+            android:hint="@string/ime_hint" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -51,7 +51,7 @@
             android:id="@+id/editPrezime"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Unesite prezime" />
+            android:hint="@string/prezime_hint" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -70,7 +70,7 @@
         android:layout_marginLeft="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Datum rođenja:"
+        android:text="@string/datum"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="@id/rodenje"
         app:layout_constraintBottom_toBottomOf="@id/rodenje"
@@ -93,7 +93,7 @@
             android:id="@+id/editRodenje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Unesite datum rođenja" />
+            android:hint="@string/datum_hint" />
     </android.support.design.widget.TextInputLayout>
 
     <View
@@ -108,7 +108,7 @@
         android:id="@+id/btnPersonal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dalje"
+        android:text="@string/btn_dalje"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"

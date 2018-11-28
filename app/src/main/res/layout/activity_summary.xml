@@ -15,7 +15,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ime"
+        android:text="@string/ime"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@id/txtPrezime"
         app:layout_constraintTop_toTopOf="parent
@@ -39,7 +39,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prezime"
+        android:text="@string/prezime"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@id/txtIme"
         app:layout_constraintTop_toTopOf="parent"
@@ -65,7 +65,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Datum"
+        android:text="@string/datum"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line1"
         />
@@ -87,7 +87,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Predmet"
+        android:text="@string/predmet_hint"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line3"
         />
@@ -109,7 +109,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profesor"
+        android:text="@string/profesor_hint"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line4"
         />
@@ -131,7 +131,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Godina"
+        android:text="@string/godina"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line5"
         />
@@ -152,7 +152,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ects"
+        android:text="@string/ects"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line6"
         />
@@ -174,7 +174,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Predavanja"
+        android:text="@string/predavanja"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line7"
         />
@@ -196,7 +196,7 @@
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LV"
+        android:text="@string/lv"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/line8"
         />
@@ -206,7 +206,7 @@
         android:id="@+id/btnEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kraj"
+        android:text="@string/btn_kraj"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"
