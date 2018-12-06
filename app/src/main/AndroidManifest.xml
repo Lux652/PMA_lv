@@ -16,9 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PersonalInfoActivity"/>
-        <activity android:name=".StudentInfoActivity" />
-        <activity android:name=".SummaryActivity" ></activity>
+        <activity android:name=".InfoActivity"></activity>
     </application>
 
 </manifest>

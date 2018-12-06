@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         oBtnStudent = (Button)findViewById(R.id.btnStudent);
         oBtnStudent.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PersonalInfoActivity.class));
+                startActivity(new Intent(MainActivity.this, InfoActivity.class));
             }
         });
 
@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
     List<Object> generateList(){
         List<Object> list = new ArrayList<>();
 
-        list.add("Studenti");
+       /* list.add("Studenti");
         list.add(new Student("Luka","Kovacic"));
         list.add(new Student("Dobar","Majstor"));
-        list.add(new Student("Tvrdi","Sir"));
+        list.add(new Student("Tvrdi","Sir"));*/
 
         return list;
     }

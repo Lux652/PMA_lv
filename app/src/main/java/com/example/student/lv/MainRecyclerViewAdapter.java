@@ -44,8 +44,8 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
         else if(viewHolder instanceof StudentViewHolder && data instanceof Student){
             Student student = (Student) data;
-            ((StudentViewHolder)viewHolder).tvStudentName.setText(student.getName());
-            ((StudentViewHolder) viewHolder).tvStudentSurname.setText(student.getLastName());
+            ((StudentViewHolder)viewHolder).tvStudentName.setText(student.getIme());
+            ((StudentViewHolder) viewHolder).tvStudentSurname.setText(student.getPrezime());
 
         }
     }
