@@ -10,7 +10,7 @@ import com.example.student.lv.Fragments.SummaryFragment;
 import com.example.student.lv.Listeners.PersonalInfoListener;
 import com.example.student.lv.Listeners.StudentInfoListener;
 import com.example.student.lv.Listeners.SummaryDataSource;
-import com.example.student.lv.Student;
+import com.example.student.lv.Models.Student;
 
 public class FragmentAdapter extends FragmentPagerAdapter implements PersonalInfoListener,StudentInfoListener,SummaryDataSource {
     private String name = "";

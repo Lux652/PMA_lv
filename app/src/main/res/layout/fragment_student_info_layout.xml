@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.TextInputLayout
+    //<android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,23 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         android:hint="@string/predmet_hint"
-        android:id="@+id/textPredmet"/>
+        android:id="@+id/textPredmet"/>*/
+
+
+    <Spinner
+        android:id="@+id/spinnerPredmet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPredmet"
+        />
+
+
+
 
     <View
         android:id="@+id/line1"
@@ -26,7 +42,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:background="#c0c0c0"
-        app:layout_constraintTop_toBottomOf="@id/textPredmet"/>
+        app:layout_constraintTop_toBottomOf="@id/spinnerPredmet"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/profIme"

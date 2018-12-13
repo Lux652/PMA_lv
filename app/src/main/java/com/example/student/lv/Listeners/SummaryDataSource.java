@@ -1,6 +1,6 @@
 package com.example.student.lv.Listeners;
 
-import com.example.student.lv.Student;
+import com.example.student.lv.Models.Student;
 
 public interface SummaryDataSource {
 

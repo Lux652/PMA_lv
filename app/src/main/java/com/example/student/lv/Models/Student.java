@@ -1,4 +1,4 @@
-package com.example.student.lv;
+package com.example.student.lv.Models;
 
 public class Student {
    private String ime;

@@ -1,6 +1,5 @@
 package com.example.student.lv.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,13 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.student.lv.Listeners.SummaryDataSource;
-import com.example.student.lv.MainActivity;
 import com.example.student.lv.R;
-import com.example.student.lv.Student;
+import com.example.student.lv.Models.Student;
 
 public class SummaryFragment extends Fragment {
 

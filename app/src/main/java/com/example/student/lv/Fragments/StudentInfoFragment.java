@@ -9,12 +9,20 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.student.lv.Listeners.StudentInfoListener;
+import com.example.student.lv.Models.CoursesResponse;
+import com.example.student.lv.Network.RetrofitManager;
 import com.example.student.lv.R;
 
-public class StudentInfoFragment extends Fragment {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class StudentInfoFragment extends Fragment implements Callback<CoursesResponse> {
     public static StudentInfoFragment newInstance(){
         Bundle args = new Bundle();
 
@@ -32,6 +40,8 @@ public class StudentInfoFragment extends Fragment {
     EditText etPredavanja;
     EditText etLV;
 
+    private Spinner spPredmet;
+
 
     @Nullable
     @Override
@@ -44,6 +54,18 @@ public class StudentInfoFragment extends Fragment {
         etPredavanja = view.findViewById(R.id.editPred);
         etLV = view.findViewById(R.id.editLV);
 
+        spPredmet = (Spinner) view.findViewById(R.id.spinnerPredmet);
+
+
+
+        /**ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values );
+        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spPredmet.setAdapter(adapter);*/
+
+
+
+        Call<CoursesResponse> callResponse = RetrofitManager.getInstance().service().getCourses();
+        callResponse.enqueue(this);
 
 
         etPredmet.addTextChangedListener(new TextWatcher() {
@@ -162,5 +184,36 @@ public class StudentInfoFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         studentInfoListener = null;
+    }
+
+
+    @Override
+    public void onResponse(Call<CoursesResponse> call, Response<CoursesResponse> response) {
+        String text;
+
+        if(response.isSuccessful() && response.body()!=null){
+            text = response.body().getCourses().toString();
+        }
+
+        else{
+            text = "";
+        }
+
+
+    setText(text);
+
+
+
+    }
+
+    @Override
+    public void onFailure(Call<CoursesResponse> call, Throwable t) {
+
+    }
+
+    void setText(String text){
+
+
+
     }
 }
