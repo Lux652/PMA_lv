@@ -5,21 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    //<android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"/>
-
-    <android.support.design.widget.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:hint="@string/predmet_hint"
-        android:id="@+id/textPredmet"/>*/
-
 
     <Spinner
         android:id="@+id/spinnerPredmet"
@@ -30,11 +15,8 @@
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textPredmet"
+        app:layout_constraintBottom_toTopOf="@id/line1"
         />
-
-
-
 
     <View
         android:id="@+id/line1"
@@ -44,8 +26,8 @@
         android:background="#c0c0c0"
         app:layout_constraintTop_toBottomOf="@id/spinnerPredmet"/>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/profIme"
+    <Spinner
+        android:id="@+id/spinnerProfesor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -53,15 +35,8 @@
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line1">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/editProfIme"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/profesor_hint" />
-
-    </android.support.design.widget.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        />
 
     <View
         android:id="@+id/line2"
@@ -69,7 +44,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:background="#c0c0c0"
-        app:layout_constraintTop_toBottomOf="@id/profIme"/>
+        app:layout_constraintTop_toBottomOf="@id/spinnerProfesor"/>
 
 
     <TextView

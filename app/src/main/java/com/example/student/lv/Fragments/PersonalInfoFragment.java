@@ -37,7 +37,6 @@ public class PersonalInfoFragment extends Fragment {
     EditText etName;
     EditText etSurname;
     EditText etBirthDate;
-
     ImageView imageView;
 
     @Nullable
@@ -66,9 +65,7 @@ public class PersonalInfoFragment extends Fragment {
             public void afterTextChanged(Editable s) {
                 if(personalInfoListener!=null){
                     personalInfoListener.setName(etName.getText().toString());
-
                 }
-
             }
         });
 
@@ -86,7 +83,6 @@ public class PersonalInfoFragment extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
                 personalInfoListener.setLastName(etSurname.getText().toString());
-
             }
         });
 
@@ -105,7 +101,6 @@ public class PersonalInfoFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
                 personalInfoListener.setBirthDate(etBirthDate.getText().toString());
-
             }
         });
 
@@ -146,4 +141,3 @@ public class PersonalInfoFragment extends Fragment {
         }
     };
 }
-

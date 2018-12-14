@@ -1,6 +1,5 @@
 package com.example.student.lv.Models;
 
-
 import java.util.ArrayList;
 
 public class CoursesResponse {

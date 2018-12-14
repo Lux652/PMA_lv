@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private Button oBtnStudent;
     private Spinner oSpinner;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,34 +28,24 @@ public class MainActivity extends AppCompatActivity {
       List<Object>studentList = generateList();
       initializeRecyclerView(recView, studentList);
 
-        oSpinner = (Spinner) findViewById(R.id.spinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.jezik_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
-        oSpinner.setAdapter(adapter);
+      oSpinner = (Spinner) findViewById(R.id.spinner);
+      ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.jezik_array, android.R.layout.simple_spinner_item);
+      adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      oSpinner.setAdapter(adapter);
 
-
-
-        oBtnStudent = (Button)findViewById(R.id.btnStudent);
-        oBtnStudent.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+      oBtnStudent = (Button)findViewById(R.id.btnStudent);
+      oBtnStudent.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) { startActivity(new Intent(MainActivity.this, InfoActivity.class));
             }
         });
-
     }
 
     List<Object> generateList(){
         List<Object> list = new ArrayList<>();
-
        /* list.add("Studenti");
         list.add(new Student("Luka","Kovacic"));
         list.add(new Student("Dobar","Majstor"));
         list.add(new Student("Tvrdi","Sir"));*/
-
         return list;
     }
 

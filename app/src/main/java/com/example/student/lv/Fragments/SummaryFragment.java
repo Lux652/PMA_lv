@@ -1,5 +1,6 @@
 package com.example.student.lv.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,9 +8,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.student.lv.InfoActivity;
 import com.example.student.lv.Listeners.SummaryDataSource;
+import com.example.student.lv.MainActivity;
 import com.example.student.lv.R;
 import com.example.student.lv.Models.Student;
 
@@ -23,23 +27,22 @@ public class SummaryFragment extends Fragment {
     }
 
     public SummaryDataSource dataSource;
-
     TextView tvIme;
     TextView tvPrezime;
     TextView tvDatum;
-
     TextView tvPredmet;
     TextView tvProfesor;
     TextView tvGodina;
     TextView tvPredavanja;
     TextView tvEcts;
     TextView tvLv;
+    Button btnKraj;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_summary_layout,container,false);
-
         tvIme = view.findViewById(R.id.txtIme);
         tvPrezime = view.findViewById(R.id.txtPrezime);
         tvDatum = view.findViewById(R.id.datumRod);
@@ -49,6 +52,7 @@ public class SummaryFragment extends Fragment {
         tvPredavanja = view.findViewById(R.id.predavanjaBroj);
         tvEcts = view.findViewById(R.id.ectsBroj);
         tvLv = view.findViewById(R.id.lvBroj);
+        btnKraj = view.findViewById(R.id.btnEnd);
         return view;
     }
 
@@ -58,7 +62,6 @@ public class SummaryFragment extends Fragment {
         if(isVisibleToUser){
             if(dataSource != null){
                 Student student = dataSource.getStudent();
-
                 if (student != null){
                     setupTextViews(student);
                 }
@@ -77,6 +80,4 @@ public class SummaryFragment extends Fragment {
         tvEcts.setText(student.getECTS());
         tvLv.setText(student.getLV());
     }
-
-
 }

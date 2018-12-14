@@ -15,7 +15,6 @@ public class RetrofitManager {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         service = retrofit.create(UdacityAPI.class);
-
     }
 
     public static RetrofitManager getInstance(){

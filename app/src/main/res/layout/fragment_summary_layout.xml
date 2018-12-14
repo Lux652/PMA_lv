@@ -16,10 +16,7 @@
         android:text="@string/ime"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@id/txtPrezime"
-        app:layout_constraintTop_toTopOf="parent
-"
-
-        />
+        app:layout_constraintTop_toTopOf="parent"/>
     <View
         android:id="@+id/line1"
         android:layout_width="fill_parent"

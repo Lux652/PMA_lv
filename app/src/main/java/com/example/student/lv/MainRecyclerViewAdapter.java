@@ -48,7 +48,6 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             Student student = (Student) data;
             ((StudentViewHolder)viewHolder).tvStudentName.setText(student.getIme());
             ((StudentViewHolder) viewHolder).tvStudentSurname.setText(student.getPrezime());
-
         }
     }
 
